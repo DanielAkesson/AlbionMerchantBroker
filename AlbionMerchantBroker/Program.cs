@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -27,6 +28,18 @@ namespace AlbionBlackMarketForms
             albionItems = JsonConvert.DeserializeObject<List<AlbionItemEntryJSON>>(input);
             Random rand = new Random();
             albionItems.Sort((x, y) => rand.Next(0, 100) - rand.Next(0, 100));
+
+
+            //input = File.ReadAllText("Resources/AlbionItems.json", Encoding.UTF8);
+            //albionItems = JsonConvert.DeserializeObject<List<AlbionItemEntryJSON>>(input);
+            //for(int i=0; i< albionItems.Count; i++)
+            //{
+            //    if (albionItems[i].LocalizedNames != null && albionItems[i].LocalizedNames.ContainsKey("EN-US"))
+            //        Console.Write(albionItems[i].LocalizedNames["EN-US"]);
+            //    if (albionItems[i].LocalizedDescriptions != null && albionItems[i].LocalizedDescriptions.ContainsKey("EN-US"))
+            //        Console.Write(albionItems[i].LocalizedDescriptions["EN-US"]);
+            //    Console.WriteLine(" index: " + i);
+            //}
 
             //Start all query threads
             foreach (AlbionItemEntryJSON entry in albionItems)

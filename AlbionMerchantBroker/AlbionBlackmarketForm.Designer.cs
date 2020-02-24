@@ -44,6 +44,12 @@ namespace AlbionBlackMarketForms
             this.remove = new System.Windows.Forms.ToolStripMenuItem();
             this.copy = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshButton = new System.Windows.Forms.Button();
+            this.buy_from_market = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,10 +72,10 @@ namespace AlbionBlackMarketForms
             this.item_list_view.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.item_list_view.FullRowSelect = true;
             this.item_list_view.HideSelection = false;
-            this.item_list_view.Location = new System.Drawing.Point(93, 12);
+            this.item_list_view.Location = new System.Drawing.Point(160, 12);
             this.item_list_view.MultiSelect = false;
             this.item_list_view.Name = "item_list_view";
-            this.item_list_view.Size = new System.Drawing.Size(1075, 642);
+            this.item_list_view.Size = new System.Drawing.Size(1008, 642);
             this.item_list_view.TabIndex = 0;
             this.item_list_view.UseCompatibleStateImageBehavior = false;
             this.item_list_view.View = System.Windows.Forms.View.Details;
@@ -121,20 +127,20 @@ namespace AlbionBlackMarketForms
             this.remove,
             this.copy});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(170, 48);
             this.contextMenuStrip1.Click += new System.EventHandler(this.ContextMenuStrip1_Click);
             // 
             // remove
             // 
             this.remove.Name = "remove";
-            this.remove.Size = new System.Drawing.Size(180, 22);
+            this.remove.Size = new System.Drawing.Size(169, 22);
             this.remove.Text = "Remove";
             this.remove.Click += new System.EventHandler(this.Remove_Click);
             // 
             // copy
             // 
             this.copy.Name = "copy";
-            this.copy.Size = new System.Drawing.Size(180, 22);
+            this.copy.Size = new System.Drawing.Size(169, 22);
             this.copy.Text = "Copy to clipboard";
             this.copy.Click += new System.EventHandler(this.Copy_Click);
             // 
@@ -142,11 +148,93 @@ namespace AlbionBlackMarketForms
             // 
             this.refreshButton.Location = new System.Drawing.Point(12, 12);
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(75, 23);
+            this.refreshButton.Size = new System.Drawing.Size(142, 37);
             this.refreshButton.TabIndex = 1;
             this.refreshButton.Text = "refresh";
             this.refreshButton.UseVisualStyleBackColor = true;
             this.refreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
+            // buy_from_market
+            // 
+            this.buy_from_market.FormattingEnabled = true;
+            this.buy_from_market.Items.AddRange(new object[] {
+            "Black Market",
+            "Bridgewatch",
+            "Caerleon",
+            "Fort Sterling",
+            "Lymhurst",
+            "Martlock",
+            "Morganas Rest",
+            "Steppe Cross",
+            "Thetford"});
+            this.buy_from_market.Location = new System.Drawing.Point(12, 115);
+            this.buy_from_market.Name = "buy_from_market";
+            this.buy_from_market.Size = new System.Drawing.Size(142, 21);
+            this.buy_from_market.TabIndex = 3;
+            // 
+            // textBox2
+            // 
+            this.textBox2.HideSelection = false;
+            this.textBox2.Location = new System.Drawing.Point(13, 89);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(141, 20);
+            this.textBox2.TabIndex = 6;
+            this.textBox2.Text = "Buy From Market";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Resources",
+            "Equipment",
+            "Other",
+            "All"});
+            this.comboBox3.Location = new System.Drawing.Point(13, 243);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(142, 21);
+            this.comboBox3.TabIndex = 7;
+            // 
+            // textBox1
+            // 
+            this.textBox1.HideSelection = false;
+            this.textBox1.Location = new System.Drawing.Point(14, 155);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(141, 20);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.Text = "Sell To Market";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.HideSelection = false;
+            this.textBox3.Location = new System.Drawing.Point(14, 217);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(141, 20);
+            this.textBox3.TabIndex = 9;
+            this.textBox3.Text = "Items To Query";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Black Market",
+            "Bridgewatch",
+            "Caerleon",
+            "Fort Sterling",
+            "Lymhurst",
+            "Martlock",
+            "Morganas Rest",
+            "Steppe Cross",
+            "Thetford"});
+            this.comboBox1.Location = new System.Drawing.Point(13, 181);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(142, 21);
+            this.comboBox1.TabIndex = 10;
             // 
             // AlbionBlackmarketForm
             // 
@@ -154,12 +242,19 @@ namespace AlbionBlackMarketForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1180, 666);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.buy_from_market);
             this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.item_list_view);
             this.Name = "AlbionBlackmarketForm";
             this.Text = "AlbionBlackmarketForm";
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -178,6 +273,12 @@ namespace AlbionBlackMarketForms
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem remove;
         private ToolStripMenuItem copy;
+        private ComboBox buy_from_market;
+        private TextBox textBox2;
+        private ComboBox comboBox3;
+        private TextBox textBox1;
+        private TextBox textBox3;
+        private ComboBox comboBox1;
     }
 }
 
